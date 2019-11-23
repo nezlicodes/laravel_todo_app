@@ -9,6 +9,11 @@
 
 <body>
     <h2 class="text-primary text-center">My todo list</h2>
+    @foreach($todos as $todo)
+    <ul>
+        <li>{{ $todo->name  }}</li>
+    </ul>
+    @endforeach
 </body>
 
 </html>
