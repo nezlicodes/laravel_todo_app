@@ -7,5 +7,5 @@
 <li> Responsive Design. </li>
 <li> Database hosted @: remotemysql.com</li>
 
-#LINK TO THE APP 
+# LINK TO THE APP 
 <a href="http://pure-headland-98957.herokuapp.com/"> ToDo app </a>
