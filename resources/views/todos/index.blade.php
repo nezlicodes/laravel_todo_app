@@ -13,7 +13,7 @@
     <h2 class="text-primary text-center">My todo list</h2>
 
 
-    <table class="table">
+    <table class="table table-hover">
         <thead>
             <tr>
                 <th scope="col">#</th>
@@ -25,7 +25,7 @@
         <tbody>@foreach($todos as $todo)
             <tr>
                 <td> {{ $todo->id }}</td>
-                <td>{{ $todo->name }}</td>
+                <td> <a href="/todos/{{ $todo->id }}"> {{ $todo->name }} </a></td>
                 <td>{{ $todo->description }}</td>
                 <td>{{ $todo->completed }}</td>
 
