@@ -14,9 +14,8 @@ class TodosController extends Controller
         return view('todos.index')->with('todos', $todos);
     }
 
-    public function show($todoId)
+    public function show(Todo $todo)
     {
-        $todo = Todo::find($todoId);
         return view('todos.show')->with('todo', $todo);
     }
 
@@ -40,14 +39,13 @@ class TodosController extends Controller
         return redirect('/');
     }
 
-    public function edit($todoId)
+    public function edit(Todo $todo)
     {
-        return view('todos.edit')->with('todo', Todo::find($todoId));
+        return view('todos.edit')->with('todo', $todo);
     }
 
-    public function update($todoId)
+    public function update(Todo $todo)
     {
-        $todo = Todo::find($todoId);
         $this->validate(request(), [
             'name' => 'required',
             'description' => 'required'
@@ -60,9 +58,8 @@ class TodosController extends Controller
         return redirect('/');
     }
 
-    public function destroy($todoId)
+    public function destroy(Todo $todo)
     {
-        $todo = Todo::find($todoId);
         $todo->delete();
         return redirect('/');
     }
