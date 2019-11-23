@@ -10,6 +10,7 @@
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">completed</th>
+            <th scope="col">Actions</th>
         </tr>
     </thead>
     <tbody>@foreach($todos as $todo)
@@ -18,7 +19,7 @@
             <td> <a href="/todos/{{ $todo->id }}"> {{ $todo->name }} </a></td>
             <td>{{ $todo->description }}</td>
             <td>{{ $todo->completed }}</td>
-
+            <td> <a href="/delete/{{ $todo->id }}" class="btn btn-danger"> Delete </a></td>
         </tr>
         @endforeach
     </tbody>
