@@ -28,13 +28,14 @@ class TodosController extends Controller
     {
         $this->validate(request(), [
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'completed' => 'required'
         ]);
         $data = request()->all();
         $todo = new Todo();
         $todo->name = $data['name'];
         $todo->description = $data['description'];
-        $todo->completed = false;
+        $todo->completed = $data['completed'];
         $todo->save();
 
         session()->flash('success', 'Todo created successfully');
@@ -50,12 +51,13 @@ class TodosController extends Controller
     {
         $this->validate(request(), [
             'name' => 'required',
-            'description' => 'required'
+            'description' => 'required',
+            'completed' => 'required'
         ]);
         $data = request()->all();
         $todo->name = $data['name'];
         $todo->description = $data['description'];
-        $todo->completed = false;
+        $todo->completed = $data['completed'];
         $todo->save();
         session()->flash('success', 'Todo updated successfully');
         return redirect('/');
