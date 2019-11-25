@@ -6,6 +6,7 @@
 <li> Model-driven routing. </li>
 <li> Responsive Design. </li>
 <li> Database hosted @: remotemysql.com</li>
+<li> Todos Sorted by completion status</li>
 
 # LINK TO THE APP 
 <a href="http://pure-headland-98957.herokuapp.com/"> ToDo app </a>

@@ -10,7 +10,7 @@ class TodosController extends Controller
     // fetch all todos from database
     public function index()
     {
-        $todos = Todo::all();
+        $todos = Todo::all()->sortBy('completed');
         return view('todos.index')->with('todos', $todos);
     }
 

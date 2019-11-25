@@ -29,7 +29,7 @@
                         <select name="completed" id="" class="form-control select">
                             <option disabled>Completed:</option>
                             <option value="0">False</option>
-                            <option value="1"> True</option>
+                            <option value="1">True</option>
                         </select>
                     </div>
                     <div class="form-group">
